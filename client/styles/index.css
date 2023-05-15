@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@import "./components/header.css";
+@import "./components/footer.css";
+@import "./components/basic.css";

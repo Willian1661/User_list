@@ -1,0 +1,11 @@
+.container-flex {
+    @apply container flex flex-wrap items-center justify-between mx-auto my-2;
+}
+
+.container-full {
+    @apply w-full mx-auto md:p-6 p-4 md:flex md:items-center md:justify-between max-w-screen-xl;
+}
+
+.span-blue{
+    @apply self-center text-xl font-semibold whitespace-nowrap hover:text-blue-700;
+}

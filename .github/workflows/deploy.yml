@@ -1,0 +1,26 @@
+name: Quality
+
+on: 
+  push:
+    branches: [master]
+  pull_request:
+    types: [opened, reopened, synchronize]
+    
+jobs:
+  verify-files:
+    name: verify files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 19
+
+      - name: Npm install
+        run: cd client && npm install
+
+      - name: Run test
+        run: cd client && npm run test
+
+      - name: Run eslint
+        run: cd client && npm run lint
