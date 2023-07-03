@@ -13,13 +13,13 @@ function getUsers(): Promise<User[]> {
   return fetch(request)
     .then(data => data.json())
     .then(data => {
-      return data as User[]
-    })
+      return data as User[];
+    });
 }
 
 getUsers()
   .then(users => {
     users.map(user => console.log(user)
-    )
-  })
+    );
+  });
 export default getUsers;

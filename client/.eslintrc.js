@@ -23,7 +23,6 @@ module.exports = {
 		"@typescript-eslint/consistent-type-definitions": "error",
 		"@typescript-eslint/semi": "error",
 		"@typescript-eslint/no-var-requires": "off",
-		"no-console": "error",
 		"curly": ["error"],
 		"no-empty-pattern": "error",
 		"no-empty-character-class": "error",

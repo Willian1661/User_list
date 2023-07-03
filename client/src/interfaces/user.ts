@@ -1,25 +1,25 @@
 interface User {
-    id: Number
-    name: String
-    username: String
-    email: String
+    id: number
+    name: string
+    username: string
+    email: string
     address: {
-        street: String
-        suite: String
-        city: String
-        zipcode: Number
+        street: string
+        suite: string
+        city: string
+        zipcode: number
         geo: {
-            lat: Number
-            lng: Number
+            lat: number
+            lng: number
         }
     }
-    phone: String
-    website: String
+    phone: string
+    website: string
     company: {
-        name: String
-        catchPhrase: String
-        bs: String
+        name: string
+        catchPhrase: string
+        bs: string
     }
-};
+}
 
-export default User
+export default User;
