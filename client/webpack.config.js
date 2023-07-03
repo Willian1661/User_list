@@ -6,7 +6,6 @@ const config = {
     entry: {
         bundle: './src/components/main.tsx'
     },
-    devtool: 'inline-source-map',
 
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
@@ -42,13 +41,14 @@ const config = {
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-                type: 'asset',
+                type: 'asset/resource',
             },
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
+            inject: false,
             template: './src/pages/index.html',
         }),
     ],

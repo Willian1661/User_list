@@ -1,12 +1,9 @@
 import '../styles/custom.css';
-import * as _ from 'lodash';
-
-function component() {
+import '../lib/api';
   const element = document.createElement('div');
 
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  element.innerHTML = "Hello webpack";
 
-  return element;
-}
+  
+  document.body.appendChild(element);
 
-document.body.appendChild(component());
