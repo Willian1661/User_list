@@ -1,25 +1,15 @@
 import User from "../interfaces/user";
 
-function getUsers(): Promise<User[]> {
-  const headers: Headers = new Headers();
+const getData = async (url: string) => {
+  const response = await fetch(url);
 
-  headers.set('Content-Type', 'application/json');
+  if (!response.ok) {
+    throw new Error("Couldn't fetch any data!");
+  }
 
-  const request: RequestInfo = new Request("https://jsonplaceholder.typicode.com/users", {
-    method: 'GET',
-    headers: headers
-  });
+  const data: User[] = await response.json();
 
-  return fetch(request)
-    .then(data => data.json())
-    .then(data => {
-      return data as User[];
-    });
-}
-
-getUsers()
-  .then(users => {
-    users.map(user => console.log(user)
-    );
-  });
-export default getUsers;
+  return data;
+  
+};
+export default getData;

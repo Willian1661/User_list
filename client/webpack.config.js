@@ -4,7 +4,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 const config = {
     entry: {
-        bundle: './src/components/main.tsx'
+        bundle: './src/pages/index.tsx'
     },
 
     resolve: {
@@ -24,15 +24,13 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/,
-            },
-            {
-                test: /\.(js|jsx)$/,
+                test: /\.[jt]sx?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
+                    options: {
+                        presets:["@babel/preset-env" ,"@babel/preset-typescript"]
+                    }
                 },
             },
             {
