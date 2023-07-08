@@ -10,5 +10,5 @@ document.body.insertAdjacentElement('afterbegin', tableSection);
 createRoot(tableSection).render(
     <Table
         title='User List'
-        data={getData("https://jsonplaceholder.typicode.com/users")}
+        data={getData()}
     />);

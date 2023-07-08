@@ -1,7 +1,7 @@
 import User from "../interfaces/user";
 
-const getData = async (url: string) => {
-  const response = await fetch(url);
+const getData = async () => {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users");
 
   if (!response.ok) {
     throw new Error("Couldn't fetch any data!");
