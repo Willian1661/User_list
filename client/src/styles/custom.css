@@ -5,10 +5,10 @@
 
 @layer base {
     th {
-        @apply border-solid border-2 px-2 bg-gray-100 text-gray-950 border-gray-950 w-max
+        @apply border-solid border-2 px-2 bg-gray-100 text-gray-950 border-gray-950
     }
 
     td {
-        @apply border-solid border-2 text-center px-2 bg-slate-50 text-gray-950 border-gray-950 w-max
+        @apply border-solid border-2 text-center px-2 bg-slate-50 text-gray-950 border-gray-950
     }
 }
