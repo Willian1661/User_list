@@ -10,6 +10,6 @@ const getData = async () => {
   const data: User[] = await response.json();
 
   return data;
-  
+
 };
 export default getData;
