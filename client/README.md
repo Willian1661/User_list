@@ -13,14 +13,11 @@ Install all the dependencies:
 ```
     npm install
 ```
-Let's get started by running webpack on terminal to generate your `/dist` folder:
+Let's get started by running webpack on terminal to generate your `/dist` folder, theoption `build` generate your build on production mode by default, however you can also generate it on development mode with `build:dev`:
 
 ```
     npm run build
-```
-This option above you generate your build on production mode by default, however you can also generate it on development mode runnig:
 
-```
     npm run build:dev
 ```
 
@@ -33,10 +30,12 @@ You will have some options to access your local host(the choise is upon you)
 
 <img src="./src/public/npm_run_server.png" width="240">
 
-Then, if you want to automatically save your changes you need to run:
+Finally, for padronize your code with eslint.js you just need to run `lint`(show all the errors to fix) and `lint:fix`(fix all the errors):
 
 ```
-    npm run watch
+    npm run lint
+
+    npm run lint:fix
 ```
 
 ### You just successfully generated your page!
@@ -53,6 +52,13 @@ Run `npm run lint:fix` command line, it'll trigger eslint only on `src/.` , but 
 it will return all the code that have to be fixed if needed and fix the errors.
 
 **But we also can run our tests with VScode's extendions like:** [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
+
+Then, if you want to automatically save your changes you need to run:
+
+```
+    npm run watch
+```
+
 
 At this point our folder structure should look like this:
 
