@@ -1,6 +1,6 @@
 import User from "../interfaces/user";
 
-const getData = async () => {
+export const getData = async () => {
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
 
   if (!response.ok) {
@@ -12,4 +12,3 @@ const getData = async () => {
   return data;
 
 };
-export default getData;

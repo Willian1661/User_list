@@ -1,15 +1,41 @@
-import getData from "../../lib/api";
+import { getData } from "../../lib/api";
 
 jest.mock('../../lib/api');
 
 describe("get data from API", () => {
     it("should process the data correctly", async () => {
 
-        (getData as jest.Mock).mockResolvedValue("Call returned mocked data");
+        const mockData = [
+            {
+              id: 1,
+              name: "Leanne Graham",
+              username: "Bret",
+              email: "Sincere@april.biz",
+              address: {
+                street: "Kulas Light",
+                suite: "Apt. 556",
+                city: "Gwenborough",
+                zipcode: "92998-3874",
+                geo: {
+                  lat: "-37.3159",
+                  lng: "81.1496",
+                },
+              },
+              phone: "1-770-736-8031 x56442",
+              website: "hildegard.org",
+              company: {
+                name: "Romaguera-Crona",
+                catchPhrase: "Multi-layered client-server neural-net",
+                bs: "harness real-time e-markets",
+              },
+            },
+          ];
+
+        (getData as jest.Mock).mockResolvedValue(mockData);
 
         const result = await getData();
 
         expect(getData).toHaveBeenCalledTimes(1);
-        expect(result).toBe("Call returned mocked data");
+        expect(result).toBe(mockData);
     });
 });

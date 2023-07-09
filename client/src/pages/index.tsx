@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from "react-dom/client";
 import '../styles/custom.css';
-import getData from '../lib/api';
+import { getData} from '../lib/api';
 import Table from '../components/Table';
 
 const tableSection = document.createElement('section');
@@ -12,3 +12,9 @@ createRoot(tableSection).render(
         title='User List'
         data={getData()}
     />);
+
+    getData().then(data => {
+        const mockedData = Promise.resolve(data[0]);
+        console.log(mockedData);
+    });
+    
