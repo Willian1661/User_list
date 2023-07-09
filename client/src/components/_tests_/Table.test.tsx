@@ -35,9 +35,9 @@ jest.mock('../../lib/api', () => ({
 describe('Table component', () => {
     it('is rendenring Table component', async () => {
 
-        const { getByText } = render(<Table data={getData()} title="foo" />)
+        const { getByText } = render(<Table data={getData()} title="foo" />);
 
-        await waitFor(() => getByText("Leanne Graham"))
+        await waitFor(() => getByText("Leanne Graham"));
 
         expect(getByText('foo')).toBeTruthy();
         expect(getByText('Leanne Graham')).toBeTruthy();

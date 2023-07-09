@@ -14,7 +14,7 @@ createRoot(tableSection).render(
     />);
 
     getData().then(data => {
-        const mockedData = Promise.resolve(data[0])
+        const mockedData = Promise.resolve(data[0]);
         console.log(mockedData);
-    })
+    });
     
