@@ -31,8 +31,8 @@ const Table: React.FC<props> = ({ data, title }) => {
                             <th>Email</th>
                             <th>phone</th>
                             <th>website</th>
-                            <th>address(city)</th>
-                            <th>company(name)</th>
+                            <th>address</th>
+                            <th>company</th>
                         </tr>
                     </thead>
                     <tbody>
