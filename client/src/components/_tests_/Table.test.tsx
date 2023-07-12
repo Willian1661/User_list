@@ -1,9 +1,9 @@
 import React from "react";
 import Table from "../Table";
-import { getData } from "../../lib/api";
+import { getData } from "../../api/Users";
 import { render, waitFor } from '@testing-library/react';
 
-jest.mock('../../lib/api', () => ({
+jest.mock('../../api/Users', () => ({
     getData: () => Promise.resolve([
         {
             id: 1,

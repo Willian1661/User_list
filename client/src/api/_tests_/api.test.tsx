@@ -1,6 +1,6 @@
-import { getData } from "../../lib/api";
+import { getData } from "../Users";
 
-jest.mock('../../lib/api');
+jest.mock('../Users');
 
 describe("get data from API", () => {
     it("should process the data correctly", async () => {
